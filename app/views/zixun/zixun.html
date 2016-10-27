@@ -1,0 +1,14 @@
+<ion-view title="资讯" id="zixun">
+    <ion-nav-bar class="bar-positive">
+        <ion-nav-back-button class="button">返回</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="has-header">
+           <h3 class="item">{{data[p].title}}</h3>
+        <p>{{data[p].text}}</p>
+        <div class="row">
+            <div class="col">
+                <img ng-src="{{data[p].img}}">
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

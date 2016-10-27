@@ -1,0 +1,49 @@
+
+[
+
+  {
+    "ding":10,
+    "cai":0,
+    "user":"遥灵-梦梨",
+    "userimg":"images/lizi.jpg",
+    "title":"好看好看啊",
+    "text":"渐渐的忘记，忘记了时间",
+    "img":"images/pl1.jpg"  },
+  {
+    "ding":10,
+    "cai":0,
+    "user":"梦梨-遥灵",
+    "userimg":"images/lizi.jpg",
+    "title":"好看好看啊",
+    "text":"一场雨把我困在这里",
+    "img":"images/a6.jpg"
+  },
+  {
+    "ding":10,
+    "cai":0,
+    "user":"我才是遥灵-梦梨",
+    "userimg":"images/1111.jpg",
+    "title":"好看好看啊",
+    "text":".........................什么都不说了"
+
+  },
+  {
+    "ding":10,
+    "cai":0,
+    "user":"我不是遥灵-梦璃",
+    "userimg":"images/lizi.jpg",
+    "title":"好看好看啊",
+    "text":"有个地方叫温暖天堂",
+    "img":"images/a4.jpg"
+  },
+
+  {
+    "ding":10,
+    "cai":0,
+    "user":"我就是遥灵梦璃",
+    "userimg":"images/lizi.jpg",
+    "title":"好看好看啊",
+    "text":"爱是心中唯一不变美丽的神话",
+    "img":"images/w3.jpg"
+  }
+]

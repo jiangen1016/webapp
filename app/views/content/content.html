@@ -1,0 +1,91 @@
+<ion-view id="content" title="帖子">
+    <ion-header-bar class="bar-positive item-input-inset">
+        <button class="button button-icon ion-ios-compose-outline"  ng-click="openModal()">发布</button>
+        <div class="item-input-wrapper">
+            <input type="text" placeholder="输入要查询的内容">
+        </div>
+        <button class="button button-icon ion-ios-search-strong"></button>
+    </ion-header-bar>
+    <ion-content>
+        <div class="wrap">
+        <div class="item item-divider">热门内容</div>
+        <div class="list card" ng-repeat="content in  contentlist">
+            <div class="item item-avatar-left">
+                <img ng-src={{content.userimg}} />
+                <h3>{{content.user}}</h3>
+                <p>{{content.text}}</p>
+            </div>
+            <div class="item item-img" ng-if="content.img">
+                <img ng-src={{content.img}}>
+            </div>
+            <div class="item tabs-icon-left haha">
+                <button class="button button-clear" ng-click="add(haha.ding)">
+                    <i class="icon ion-thumbsup assertive button-small"> 赞{{haha.ding}}</i>
+                </button>
+                <button class="button button-clear" ng-click="jian(haha.cai)">
+                    <i class="icon ion-thumbsdown dark button-small"> 踩{{haha.cai}}</i>
+                </button>
+                <button class="button button-clear">
+                    <i class="icon ion-chatbox-working calm button-small"> 评论</i>
+                </button>
+                <button class="button button-clear">
+                    <i class="icon ion-share balanced button-small">分享</i>
+                </button>
+            </div>
+        </div>
+        <!--无限刷新-->
+            <ion-infinite-scroll on-infinite="getcontent()"
+                                 ng-if="page<total"
+                                 immediate-check="false">
+            </ion-infinite-scroll>
+
+        </div>
+    </ion-content>
+    <div class="top" ng-click="top()">
+        TOP
+    </div>
+</ion-view>
+<script id="views/modal.html" type="text/ng-template">
+    <ion-model-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+            <h1 class="title">发状态</h1>
+            <button class="button button-clear button-primary" ng-click="closeModal()">取消</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+            <div class="list">
+                <div class="item item-input">
+                    <textarea  rows="10" placeholder="分享新鲜事" ng-model="u.newtxt"></textarea>
+                </div>
+                <div class="item item-input">
+                    <div class="col"><a class="button button-icon ion-image button-large"></a></div>
+                    <div class="col"><a class="button button-icon ion-android-happy button-large"></a></div>
+                    <div class="col"><a class="button button-icon ion-at button-large"></a></div>
+                    <div class="col"><a class="button button-icon ion-pound button-large"></a></div>
+                    <div class="col"><a class="button button-icon ion-plus button-large"></a></div>
+                </div>
+                <div class="item item-icon-left">
+                    <i class="icon ion-ios-location"></i>所在位置<span class="badge assertive">NEW</span>
+                </div>
+                <div class="item item-icon-right">
+                    分享到
+                    <i class="icon ion-ios-arrow-down button-small"></i>
+                </div>
+                <label class="item item-radio">
+                    <input type="radio" name="mi"/>
+                    <div class="radio-content">
+                        <div class="item-content">公开</div>
+                        <i class="radio-icon ion-checkmark assertive"></i>
+                    </div>
+                </label>
+                <label class="item item-radio">
+                    <input type="radio" name="mi"/>
+                    <div class="radio-content">
+                        <div class="item-content">好友圈</div>
+                        <i class="radio-icon ion-checkmark assertive"></i>
+                    </div>
+                </label>
+                <button class="button button-full button-assertive" ng-click="createContact(u)" ng-disabled="!u.newtxt">发表</button>
+            </div>
+        </ion-content>
+    </ion-model-view>
+</script>

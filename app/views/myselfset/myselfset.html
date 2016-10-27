@@ -1,0 +1,49 @@
+
+<ion-view title="个人信息" id="myselfset">
+    <ion-nav-bar class="bar-positive">
+        <ion-nav-back-button class="button">我的</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content >
+        <div class="list ">
+            <div class="item my item-icon-right">
+                头像
+                <img src="images/1111.jpg" alt="">
+                <i class="icon  ion-chevron-right button-small"></i>
+            </div>
+            <div class="item item-icon-right">
+                名字
+                <span class="item-note">{{people.name}}</span>
+                <i class="icon  ion-chevron-right button-small"></i>
+            </div>
+            <div class="item item-icon-right">
+                微信号
+                <span class="item-note">{{people.number}}</span>
+                <i class="icon  ion-chevron-right button-small"></i>
+            </div>
+            <div class="item item-icon-right">
+                我的二维码
+                <img class="qr" src="images/qr.jpg" alt="">
+                <i class="icon  ion-chevron-right button-small"></i>
+            </div>
+            <div class="item item-icon-right">
+                我的地址
+                <i class="icon  ion-chevron-right button-small"></i>
+            </div>
+            <div class="item item-icon-right">
+                性别
+                <span class="item-note">{{people.sex}}</span>
+                <i class="icon  ion-chevron-right button-small"></i>
+            </div>
+            <div class="item item-icon-right">
+                地区
+                <span class="item-note">{{people.city}}</span>
+                <i class="icon  ion-chevron-right button-small"></i>
+            </div>
+            <div class="item item-icon-right">
+                个性签名
+                <span class="item-note">{{people.signed}}</span>
+                <i class="icon  ion-chevron-right button-small"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

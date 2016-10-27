@@ -1,0 +1,70 @@
+/**
+ * Created by hxsd on 2016/9/28.
+ */
+var myapp=angular.module('myapp',["ionic"]);
+myapp.config(function($stateProvider,$urlRouterProvider){
+    $stateProvider.state('tabs',{
+        url:"/tabs",
+        templateUrl:"views/tabs/tabs.html"
+    }).state('home',{
+        url:"/home",
+        templateUrl:"views/home/home.html"
+    }).state('tabs.main',{
+        url:"/main",
+        views:{"tabs_main":{templateUrl:"views/main/main.html",
+            controller:"mainCtrl"}}
+    }).state('tabs.login',{
+        url:"/login",
+        views:{"tabs_main":{templateUrl:"views/login/login.html",
+            controller:"loginCtrl"}}
+    }).state('tabs.zixun',{
+        url:"/zixun?:id",
+        views:{"tabs_main":{templateUrl:"views/zixun/zixun.html",
+        controller:"zixunCtrl"}}
+    }).state('tabs.register',{
+        url:"/register",
+        views:{"tabs_main":{templateUrl:"views/register/register.html"}}
+    }).state('tabs.content',{
+        url:"/content",
+        views:{"tabs_content":{templateUrl:"views/content/content.html",
+            controller:"contCtrl"}}
+    }).state('tabs.friends',{
+        url:"/friends",
+        views:{"tabs_friend":{templateUrl:"views/friends/friends.html"}}
+    }).state('tabs.photo',{
+        url:"/photo",
+        views:{"tabs_friend":{templateUrl:"views/photo/photo.html",controller:"photoCtrl"}}
+    }).state('tabs.myself',{
+        url:"/myself",
+        views:{"tabs_myself":{templateUrl:"views/myself/myself.html"}}
+    }).state('tabs.myselfset',{
+        url:"/myselfset",
+        views:{"tabs_myself":{
+            templateUrl:"views/myselfset/myselfset.html",
+            controller:"mysetCtrl"
+        }}
+    }).state('tabs.setting',{
+        url:"/setting",
+        views:{"tabs_myself":{
+            templateUrl:"views/setting/setting.html"
+        }}
+    });
+    $urlRouterProvider.otherwise('/home')
+
+
+});
+//========================主控制器
+myapp.controller('bigCtrl',function($scope,$ionicPopup){
+    $scope.noopen=function(){
+        $ionicPopup.alert({
+            title:"暂未开放",
+            template:"此功能正在完善，感谢支持"
+        })
+    };
+    $scope.reg=function(){
+        $ionicPopup.alert({
+            title:"恭喜,注册成功",
+            template:"请注意查看邮件"
+        })
+    };
+});

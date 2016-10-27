@@ -1,0 +1,19 @@
+<ion-view title="我的相册">
+    <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button class="button">返回</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content>
+        <div class="item item-divider">{{date | date:"yyyy年MM月dd日"}}</div>
+            <div class="row" ng-repeat="item in data">
+                <div class="col" ng-repeat="img in item.img">
+                    <img ng-src="{{img.img}}">
+                </div>
+            </div>
+        <div class="item item-divider">{{date | date:"yyyy年MM月dd日"}}</div>
+        <div class="row" ng-repeat="item2 in data2">
+            <div class="col" ng-repeat="img in item2.img">
+                <img ng-src="{{img.img}}">
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
