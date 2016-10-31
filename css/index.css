@@ -8,7 +8,7 @@ body{font-family:"微软雅黑";}
     color:#fff;text-align:center;font-size:22px;
     line-height:50px;background:rgba(0,0,0,.1);
     border:2px solid #fff;border-radius:10px;height:50px;
-    position:absolute;bottom:80px;left:50%;margin-left:-50px;padding:0 20px}
+    position:absolute;bottom:40%;left:50%;margin-left:-50px;padding:0 20px}
 #myself .me{margin-bottom:20px;}
 #myself .me img{width:70px;height:70px;border-radius:0;}
 #myself .setting{margin-top:20px;}
