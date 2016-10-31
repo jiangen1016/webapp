@@ -2,7 +2,8 @@
  * Created by hxsd on 2016/9/28.
  */
 var myapp=angular.module('myapp',["ionic"]);
-myapp.config(function($stateProvider,$urlRouterProvider){
+myapp.config(function($stateProvider,$urlRouterProvider,$ionicConfigProvider){
+    $ionicConfigProvider.tabs.position('bottom');
     $stateProvider.state('tabs',{
         url:"/tabs",
         templateUrl:"views/tabs/tabs.html"
